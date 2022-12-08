@@ -1,3 +1,5 @@
+## Formating Traits
+
 We can serialize types into strings using the formatting macros in `std::fmt`, the most well-known of the bunch being `println!`. We can pass formatting parameters to the `{}` placeholders used within format `str`s which are then used to select which trait impl to use to serialize the placeholder's argument.
 
 | Trait      | Placeholder | Description                          |
