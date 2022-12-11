@@ -2,9 +2,9 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Generic Blanket Impls](#generic-blanket-impls)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Generic Blanket Impls](../chapter-1/generic-blanket-impls.md)
 
 ```rust
 trait Display {

@@ -2,12 +2,11 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Sized](#sized)
-- [Generic Parameters](#generic-parameters)
-- [Sized](#sized)
-- [Deref & DerefMut](#deref--derefmut)
+- [Self](..chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Sized](../chapter-2/sized.md)
+- [Generic Parameters](../chapter-1/generic-parameters.md)
+- [Deref & DerefMut](../chapter-5/deref--derefmut.md)
 
 ```rust
 trait AsRef<T: ?Sized> {

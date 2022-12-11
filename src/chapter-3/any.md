@@ -2,10 +2,10 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Generic Blanket Impls](#generic-blanket-impls)
-- [Subtraits & Supertraits](#subtraits--supertraits)
-- [Trait Objects](#trait-objects)
+- [Self](../chapter-1/self.md)
+- [Generic Blanket Impls](../chapter-1/generic-blanket-impls.md)
+- [Subtraits & Supertraits](../chapter-1/subtraits--supertraits.md)
+- [Trait Objects](../chapter-1/trait-objects.md)
 
 ```rust
 trait Any: 'static {

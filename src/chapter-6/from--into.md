@@ -4,11 +4,11 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Functions](#functions)
-- [Methods](#methods)
-- [Generic Parameters](#generic-parameters)
-- [Generic Blanket Impls](#generic-blanket-impls)
+- [Self](../chapter-1/self.md)
+- [Functions](../chapter-1/functions.md)
+- [Methods](../chapter-1/methods.md)
+- [Generic Parameters](../chapter-1/generic-parameters.md)
+- [Generic Blanket Impls](../chapter-1/generic-blanket-impls.md)
 
 ```rust
 trait From<T> {

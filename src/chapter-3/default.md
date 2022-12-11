@@ -2,9 +2,9 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Functions](#functions)
-- [Derive Macros](#derive-macros)
+- [Self](../chapter-1/self.md)
+- [Functions](../chapter-1/functions.md)
+- [Derive Macros](../chapter-1/derive-macros.md)
 
 ```rust
 trait Default {

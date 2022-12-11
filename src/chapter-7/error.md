@@ -6,16 +6,16 @@ The best time to talk about error handling and the `Error` trait is after going 
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Default Impls](#default-impls)
-- [Generic Blanket Impls](#generic-blanket-impls)
-- [Subtraits & Supertraits](#subtraits--supertraits)
-- [Trait Objects](#trait-objects)
-- [Display & ToString](#display--tostring)
-- [Debug](#debug)
-- [Any](#any)
-- [From & Into](#from--into)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Default Impls](../chapter-1/default-impls.md)
+- [Generic Blanket Impls](../chapter-1/generic-blanket-impls.md)
+- [Subtraits & Supertraits](../chapter-1/subtraits--supertraits.md)
+- [Trait Objects](../chapter-1/trait-objects.md)
+- [Display & ToString](../chapter-4/display--tostring.md)
+- [Debug](../chapter-4/debug.md)
+- [Any](../chapter-3/any.md)
+- [From & Into](../chapter-6/from--into.md)
 
 ```rust
 trait Error: Debug + Display {

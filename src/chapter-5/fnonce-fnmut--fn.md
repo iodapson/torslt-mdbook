@@ -2,12 +2,12 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Associated Types](#associated-types)
-- [Generic Parameters](#generic-parameters)
-- [Generic Types vs Associated Types](#generic-types-vs-associated-types)
-- [Subtraits & Supertraits](#subtraits--supertraits)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Associated Types](../chapter-1/associated-types.md)
+- [Generic Parameters](../chapter-1/generic-parameters.md)
+- [Generic Types vs Associated Types](../chapter-1/generic-types-vs-associated-types.md)
+- [Subtraits & Supertraits](../chapter-1/subtraits--supertraits.md)
 
 ```rust
 trait FnOnce<Args> {

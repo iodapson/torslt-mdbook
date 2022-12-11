@@ -2,15 +2,15 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Generic Parameters](#generic-parameters)
-- [Subtraits & Supertraits](#subtraits--supertraits)
-- [Sized](#sized)
-- [AsRef & AsMut](#asref--asmut)
-- [PartialEq & Eq](#partialeq--eq)
-- [Hash](#hash)
-- [PartialOrd & Ord](#partialord--ord)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Generic Parameters](../chapter-1/generic-parameters.md)
+- [Subtraits & Supertraits](../chapter-1/subtraits--supertraits.md)
+- [Sized](../chapter-2/sized.md)
+- [AsRef & AsMut](./asref--asmut.md)
+- [PartialEq & Eq](../chapter-5/partialeq--eq.md)
+- [Hash](../chapter-5/hash.md)
+- [PartialOrd & Ord](../chapter-5/partialord--ord.md)
 
 ```rust
 trait Borrow<Borrowed>

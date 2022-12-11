@@ -2,10 +2,10 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Default Impls](#default-impls)
-- [Derive Macros](#derive-macros)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Default Impls](../chapter-1/default-impls.md)
+- [Derive Macros](../chapter-1/derive-macros.md)
 
 ```rust
 trait Clone {

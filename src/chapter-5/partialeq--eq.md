@@ -2,14 +2,14 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Generic Parameters](#generic-parameters)
-- [Default Impls](#default-impls)
-- [Generic Blanket Impls](#generic-blanket-impls)
-- [Marker Traits](#marker-traits)
-- [Subtraits & Supertraits](#subtraits--supertraits)
-- [Sized](#sized)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Generic Parameters](../chapter-1/generic-parameters.md)
+- [Default Impls](../chapter-1/default-impls.md)
+- [Generic Blanket Impls](../chapter-1/generic-blanket-impls.md)
+- [Marker Traits](../chapter-1/marker-traits.md)
+- [Subtraits & Supertraits](../chapter-1/subtraits--supertraits.md)
+- [Sized](../chapter-2/sized.md)
 
 ```rust
 trait PartialEq<Rhs = Self>

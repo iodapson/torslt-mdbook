@@ -2,12 +2,12 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Associated Types](#associated-types)
-- [Generic Parameters](#generic-parameters)
-- [Generic Types vs Associated Types](#generic-types-vs-associated-types)
-- [Derive Macros](#derive-macros)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Associated Types](../chapter-1/associated-types.md)
+- [Generic Parameters](../chapter-1/generic-parameters.md)
+- [Generic Types vs Associated Types](../chapter-1/generic-types-vs-associated-types.md)
+- [Derive Macros](../chapter-1/derive-macros.md)
 
 ```rust
 trait Add<Rhs = Self> {

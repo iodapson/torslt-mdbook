@@ -2,9 +2,9 @@
 
 Prerequisites
 
-- [Marker Traits](#marker-traits)
-- [Subtraits & Supertraits](#subtraits--supertraits)
-- [Derive Macros](#derive-macros)
+- [Marker Traits](../chapter-1/marker-traits.md)
+- [Subtraits & Supertraits](../chapter-1/subtraits--supertraits.md)
+- [Derive Macros](../chapter-1/derive-macros.md)
 
 ```rust
 trait Copy: Clone {}

@@ -2,12 +2,12 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Generic Parameters](#generic-parameters)
-- [Default Impls](#default-impls)
-- [Derive Macros](#derive-macros)
-- [PartialEq & Eq](#partialeq--eq)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Generic Parameters](../chapter-1/generic-parameters.md)
+- [Default Impls](../chapter-1/default-impls.md)
+- [Derive Macros](../chapter-1/derive-macros.md)
+- [PartialEq & Eq](./partialeq--eq.md)
 
 ```rust
 trait Hash {

@@ -2,10 +2,10 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Associated Types](#associated-types)
-- [Default Impls](#default-impls)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Associated Types](../chapter-1/associated-types.md)
+- [Default Impls](../chapter-1/default-impls.md)
 
 ```rust
 trait Iterator {

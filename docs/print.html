@@ -568,6 +568,7 @@ struct SomeType;
 }
 struct SomeType;
 struct OtherType;
+
 // use default impl for Trait::method
 impl Trait for SomeType {}
 impl Trait for OtherType {
@@ -1009,7 +1010,7 @@ fn main() {
 <li><a href="chapter-2/../chapter-1/auto-traits.html">Auto Traits</a></li>
 </ul>
 <p>If a type is <code>Sized</code> that means its size in bytes is known at compile-time and it's possible to put instances of the type on the stack.</p>
-<p>Sizedness of types and its implications is a subtle yet huge topic that affects a lot of different aspects of the language. It's so important that I wrote an entire article on it called <a href="chapter-2/./sizedness-in-rust.html">Sizedness in Rust</a> which I highly recommend reading for anyone who would like to understand sizedness in-depth. I'll summarize a few key things which are relevant to this article.</p>
+<p>Sizedness of types and its implications is a subtle yet huge topic that affects a lot of different aspects of the language. It's so important that I wrote an entire article on it called <a href="https://github.com/pretzelhammer/rust-blog/blob/master/posts/sizedness-in-rust.md">Sizedness in Rust</a> which I highly recommend reading for anyone who would like to understand sizedness in-depth. I'll summarize a few key things which are relevant to this article.</p>
 <ol>
 <li>All generic types get an implicit <code>Sized</code> bound.</li>
 </ol>
@@ -1030,15 +1031,15 @@ fn func&lt;T: ?Sized&gt;(t: &amp;T) {}
 // example above desugared
 trait Trait: ?Sized {}
 </code></pre>
-<p>This is so that trait objects can impl the trait. Again, all of the nitty gritty details are in <a href="chapter-2/./sizedness-in-rust.html">Sizedness in Rust</a>. <strong>Do something: make link work</strong></p>
+<p>This is so that trait objects can impl the trait. Again, all of the nitty gritty details are in <a href="https://github.com/pretzelhammer/rust-blog/blob/master/posts/sizedness-in-rust.md">Sizedness in Rust</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="general-traits"><a class="header" href="#general-traits">General Traits</a></h2>
 <p><code>Default</code>, <code>Clone</code>, <code>Copy</code> <code>Any</code> is discussed herein.</p>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="default"><a class="header" href="#default">Default</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-3/default.html#self">Self</a></li>
-<li><a href="chapter-3/default.html#functions">Functions</a></li>
-<li><a href="chapter-3/default.html#derive-macros">Derive Macros</a></li>
+<li><a href="chapter-3/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-3/../chapter-1/functions.html">Functions</a></li>
+<li><a href="chapter-3/../chapter-1/derive-macros.html">Derive Macros</a></li>
 </ul>
 <pre><code class="language-rust">trait Default {
     fn default() -&gt; Self;
@@ -1136,10 +1137,10 @@ struct Color {
 <div style="break-before: page; page-break-before: always;"></div><h3 id="clone"><a class="header" href="#clone">Clone</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-3/clone.html#self">Self</a></li>
-<li><a href="chapter-3/clone.html#methods">Methods</a></li>
-<li><a href="chapter-3/clone.html#default-impls">Default Impls</a></li>
-<li><a href="chapter-3/clone.html#derive-macros">Derive Macros</a></li>
+<li><a href="chapter-3/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-3/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-3/../chapter-1/default-impls.html">Default Impls</a></li>
+<li><a href="chapter-3/../chapter-1/derive-macros.html">Derive Macros</a></li>
 </ul>
 <pre><code class="language-rust">trait Clone {
     fn clone(&amp;self) -&gt; Self;
@@ -1187,9 +1188,9 @@ struct SomeStruct {
 <div style="break-before: page; page-break-before: always;"></div><h3 id="copy"><a class="header" href="#copy">Copy</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-3/copy.html#marker-traits">Marker Traits</a></li>
-<li><a href="chapter-3/copy.html#subtraits--supertraits">Subtraits &amp; Supertraits</a></li>
-<li><a href="chapter-3/copy.html#derive-macros">Derive Macros</a></li>
+<li><a href="chapter-3/../chapter-1/marker-traits.html">Marker Traits</a></li>
+<li><a href="chapter-3/../chapter-1/subtraits--supertraits.html">Subtraits &amp; Supertraits</a></li>
+<li><a href="chapter-3/../chapter-1/derive-macros.html">Derive Macros</a></li>
 </ul>
 <pre><code class="language-rust">trait Copy: Clone {}
 </code></pre>
@@ -1234,10 +1235,10 @@ dest = { is_valid: bool, data: i32 }
 <div style="break-before: page; page-break-before: always;"></div><h3 id="any"><a class="header" href="#any">Any</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-3/any.html#self">Self</a></li>
-<li><a href="chapter-3/any.html#generic-blanket-impls">Generic Blanket Impls</a></li>
-<li><a href="chapter-3/any.html#subtraits--supertraits">Subtraits &amp; Supertraits</a></li>
-<li><a href="chapter-3/any.html#trait-objects">Trait Objects</a></li>
+<li><a href="chapter-3/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-3/../chapter-1/generic-blanket-impls.html">Generic Blanket Impls</a></li>
+<li><a href="chapter-3/../chapter-1/subtraits--supertraits.html">Subtraits &amp; Supertraits</a></li>
+<li><a href="chapter-3/../chapter-1/trait-objects.html">Trait Objects</a></li>
 </ul>
 <pre><code class="language-rust">trait Any: 'static {
     fn type_id(&amp;self) -&gt; TypeId;
@@ -1337,9 +1338,9 @@ fn main() {
 </div><div style="break-before: page; page-break-before: always;"></div><h3 id="display--tostring"><a class="header" href="#display--tostring">Display &amp; ToString</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-4/display--tostring.html#self">Self</a></li>
-<li><a href="chapter-4/display--tostring.html#methods">Methods</a></li>
-<li><a href="chapter-4/display--tostring.html#generic-blanket-impls">Generic Blanket Impls</a></li>
+<li><a href="chapter-4/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-4/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-4/../chapter-1/generic-blanket-impls.html">Generic Blanket Impls</a></li>
 </ul>
 <pre><code class="language-rust">trait Display {
     fn fmt(&amp;self, f: &amp;mut Formatter&lt;'_&gt;) -&gt; Result;
@@ -1393,10 +1394,10 @@ fn display_equals_to_string() {
 <div style="break-before: page; page-break-before: always;"></div><h3 id="debug"><a class="header" href="#debug">Debug</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-4/debug.html#self">Self</a></li>
-<li><a href="chapter-4/debug.html#methods">Methods</a></li>
-<li><a href="chapter-4/debug.html#derive-macros">Derive Macros</a></li>
-<li><a href="chapter-4/debug.html#display--tostring">Display &amp; ToString</a></li>
+<li><a href="chapter-4/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-4/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-4/../chapter-1/derive-macros.html">Derive Macros</a></li>
+<li><a href="chapter-4/./display--tostring.html">Display &amp; ToString</a></li>
 </ul>
 <pre><code class="language-rust">trait Debug {
     fn fmt(&amp;self, f: &amp;mut Formatter&lt;'_&gt;) -&gt; Result;
@@ -1495,14 +1496,14 @@ fn example_dbg() {
 </div><div style="break-before: page; page-break-before: always;"></div><h4 id="partialeq--eq"><a class="header" href="#partialeq--eq">PartialEq &amp; Eq</a></h4>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-5/partialeq--eq.html#self">Self</a></li>
-<li><a href="chapter-5/partialeq--eq.html#methods">Methods</a></li>
-<li><a href="chapter-5/partialeq--eq.html#generic-parameters">Generic Parameters</a></li>
-<li><a href="chapter-5/partialeq--eq.html#default-impls">Default Impls</a></li>
-<li><a href="chapter-5/partialeq--eq.html#generic-blanket-impls">Generic Blanket Impls</a></li>
-<li><a href="chapter-5/partialeq--eq.html#marker-traits">Marker Traits</a></li>
-<li><a href="chapter-5/partialeq--eq.html#subtraits--supertraits">Subtraits &amp; Supertraits</a></li>
-<li><a href="chapter-5/partialeq--eq.html#sized">Sized</a></li>
+<li><a href="chapter-5/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-5/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-5/../chapter-1/generic-parameters.html">Generic Parameters</a></li>
+<li><a href="chapter-5/../chapter-1/default-impls.html">Default Impls</a></li>
+<li><a href="chapter-5/../chapter-1/generic-blanket-impls.html">Generic Blanket Impls</a></li>
+<li><a href="chapter-5/../chapter-1/marker-traits.html">Marker Traits</a></li>
+<li><a href="chapter-5/../chapter-1/subtraits--supertraits.html">Subtraits &amp; Supertraits</a></li>
+<li><a href="chapter-5/../chapter-2/sized.html">Sized</a></li>
 </ul>
 <pre><code class="language-rust">trait PartialEq&lt;Rhs = Self&gt;
 where
@@ -1740,12 +1741,12 @@ fn example_compare_collections&lt;T: PartialEq&gt;(vec1: Vec&lt;T&gt;, vec2: Vec
 <div style="break-before: page; page-break-before: always;"></div><h4 id="hash"><a class="header" href="#hash">Hash</a></h4>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-5/hash.html#self">Self</a></li>
-<li><a href="chapter-5/hash.html#methods">Methods</a></li>
-<li><a href="chapter-5/hash.html#generic-parameters">Generic Parameters</a></li>
-<li><a href="chapter-5/hash.html#default-impls">Default Impls</a></li>
-<li><a href="chapter-5/hash.html#derive-macros">Derive Macros</a></li>
-<li><a href="chapter-5/hash.html#partialeq--eq">PartialEq &amp; Eq</a></li>
+<li><a href="chapter-5/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-5/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-5/../chapter-1/generic-parameters.html">Generic Parameters</a></li>
+<li><a href="chapter-5/../chapter-1/default-impls.html">Default Impls</a></li>
+<li><a href="chapter-5/../chapter-1/derive-macros.html">Derive Macros</a></li>
+<li><a href="chapter-5/./partialeq--eq.html">PartialEq &amp; Eq</a></li>
 </ul>
 <pre><code class="language-rust">trait Hash {
     fn hash&lt;H: Hasher&gt;(&amp;self, state: &amp;mut H);
@@ -1792,14 +1793,14 @@ fn example_hashset() {
 <div style="break-before: page; page-break-before: always;"></div><h4 id="partialord--ord"><a class="header" href="#partialord--ord">PartialOrd &amp; Ord</a></h4>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-5/partialord--ord.html#self">Self</a></li>
-<li><a href="chapter-5/partialord--ord.html#methods">Methods</a></li>
-<li><a href="chapter-5/partialord--ord.html#generic-parameters">Generic Parameters</a></li>
-<li><a href="chapter-5/partialord--ord.html#default-impls">Default Impls</a></li>
-<li><a href="chapter-5/partialord--ord.html#subtraits--supertraits">Subtraits &amp; Supertraits</a></li>
-<li><a href="chapter-5/partialord--ord.html#derive-macros">Derive Macros</a></li>
-<li><a href="chapter-5/partialord--ord.html#sized">Sized</a></li>
-<li><a href="chapter-5/partialord--ord.html#partialeq--eq">PartialEq &amp; Eq</a></li>
+<li><a href="chapter-5/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-5/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-5/../chapter-1/generic-parameters.html">Generic Parameters</a></li>
+<li><a href="chapter-5/../chapter-1/default-impls.html">Default Impls</a></li>
+<li><a href="chapter-5/../chapter-1/subtraits--supertraits.html">Subtraits &amp; Supertraits</a></li>
+<li><a href="chapter-5/../chapter-1/derive-macros.html">Derive Macros</a></li>
+<li><a href="chapter-5/../chapter-2/sized.html">Sized</a></li>
+<li><a href="chapter-5/./partialeq--eq.html">PartialEq &amp; Eq</a></li>
 </ul>
 <pre><code class="language-rust">enum Ordering {
     Less,
@@ -1969,12 +1970,12 @@ fn example_sort&lt;T: Ord&gt;(mut sortable: Vec&lt;T&gt;) -&gt; Vec&lt;T&gt; {
 <div style="break-before: page; page-break-before: always;"></div><h4 id="add--addassign"><a class="header" href="#add--addassign">Add &amp; AddAssign</a></h4>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-5/add--addassign.html#self">Self</a></li>
-<li><a href="chapter-5/add--addassign.html#methods">Methods</a></li>
-<li><a href="chapter-5/add--addassign.html#associated-types">Associated Types</a></li>
-<li><a href="chapter-5/add--addassign.html#generic-parameters">Generic Parameters</a></li>
-<li><a href="chapter-5/add--addassign.html#generic-types-vs-associated-types">Generic Types vs Associated Types</a></li>
-<li><a href="chapter-5/add--addassign.html#derive-macros">Derive Macros</a></li>
+<li><a href="chapter-5/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-5/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-5/../chapter-1/associated-types.html">Associated Types</a></li>
+<li><a href="chapter-5/../chapter-1/generic-parameters.html">Generic Parameters</a></li>
+<li><a href="chapter-5/../chapter-1/generic-types-vs-associated-types.html">Generic Types vs Associated Types</a></li>
+<li><a href="chapter-5/../chapter-1/derive-macros.html">Derive Macros</a></li>
 </ul>
 <pre><code class="language-rust">trait Add&lt;Rhs = Self&gt; {
     type Output;
@@ -2139,12 +2140,12 @@ fn main() {
 </div><div style="break-before: page; page-break-before: always;"></div><h4 id="fnonce-fnmut--fn"><a class="header" href="#fnonce-fnmut--fn">FnOnce, FnMut, &amp; Fn</a></h4>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-5/fnonce-fnmut--fn.html#self">Self</a></li>
-<li><a href="chapter-5/fnonce-fnmut--fn.html#methods">Methods</a></li>
-<li><a href="chapter-5/fnonce-fnmut--fn.html#associated-types">Associated Types</a></li>
-<li><a href="chapter-5/fnonce-fnmut--fn.html#generic-parameters">Generic Parameters</a></li>
-<li><a href="chapter-5/fnonce-fnmut--fn.html#generic-types-vs-associated-types">Generic Types vs Associated Types</a></li>
-<li><a href="chapter-5/fnonce-fnmut--fn.html#subtraits--supertraits">Subtraits &amp; Supertraits</a></li>
+<li><a href="chapter-5/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-5/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-5/../chapter-1/associated-types.html">Associated Types</a></li>
+<li><a href="chapter-5/../chapter-1/generic-parameters.html">Generic Parameters</a></li>
+<li><a href="chapter-5/../chapter-1/generic-types-vs-associated-types.html">Generic Types vs Associated Types</a></li>
+<li><a href="chapter-5/../chapter-1/subtraits--supertraits.html">Subtraits &amp; Supertraits</a></li>
 </ul>
 <pre><code class="language-rust">trait FnOnce&lt;Args&gt; {
     type Output;
@@ -2243,11 +2244,11 @@ fn main() {
 </div><div style="break-before: page; page-break-before: always;"></div><h4 id="deref--derefmut"><a class="header" href="#deref--derefmut">Deref &amp; DerefMut</a></h4>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-5/deref--derefmut.html#self">Self</a></li>
-<li><a href="chapter-5/deref--derefmut.html#methods">Methods</a></li>
-<li><a href="chapter-5/deref--derefmut.html#associated-types">Associated Types</a></li>
-<li><a href="chapter-5/deref--derefmut.html#subtraits--supertraits">Subtraits &amp; Supertraits</a></li>
-<li><a href="chapter-5/deref--derefmut.html#sized">Sized</a></li>
+<li><a href="chapter-5/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-5/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-5/../chapter-1/associated-types.html">Associated Types</a></li>
+<li><a href="chapter-5/../chapter-1/subtraits--supertraits.html">Subtraits &amp; Supertraits</a></li>
+<li><a href="chapter-5/../chapter-2/sized.html">Sized</a></li>
 </ul>
 <pre><code class="language-rust">trait Deref {
     type Target: ?Sized;
@@ -2474,13 +2475,13 @@ fn main() {
 <div style="break-before: page; page-break-before: always;"></div><h4 id="index--indexmut"><a class="header" href="#index--indexmut">Index &amp; IndexMut</a></h4>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-5/index--indexmut.html#self">Self</a></li>
-<li><a href="chapter-5/index--indexmut.html#methods">Methods</a></li>
-<li><a href="chapter-5/index--indexmut.html#associated-types">Associated Types</a></li>
-<li><a href="chapter-5/index--indexmut.html#generic-parameters">Generic Parameters</a></li>
-<li><a href="chapter-5/index--indexmut.html#generic-types-vs-associated-types">Generic Types vs Associated Types</a></li>
-<li><a href="chapter-5/index--indexmut.html#subtraits--supertraits">Subtraits &amp; Supertraits</a></li>
-<li><a href="chapter-5/index--indexmut.html#sized">Sized</a></li>
+<li><a href="chapter-5/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-5/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-5/../chapter-1/associated-types.html">Associated Types</a></li>
+<li><a href="chapter-5/../chapter-1/generic-parameters.html">Generic Parameters</a></li>
+<li><a href="chapter-5/../chapter-1/generic-types-vs-associated-types.html">Generic Types vs Associated Types</a></li>
+<li><a href="chapter-5/../chapter-1/subtraits--supertraits.html">Subtraits &amp; Supertraits</a></li>
+<li><a href="chapter-5/../chapter-1/sized.html">Sized</a></li>
 </ul>
 <pre><code class="language-rust">trait Index&lt;Idx: ?Sized&gt; {
     type Output: ?Sized;
@@ -2596,8 +2597,8 @@ impl Index&lt;BasketballPosition&gt; for BasketballTeam {
 <div style="break-before: page; page-break-before: always;"></div><h4 id="drop"><a class="header" href="#drop">Drop</a></h4>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-5/drop.html#self">Self</a></li>
-<li><a href="chapter-5/drop.html#methods">Methods</a></li>
+<li><a href="chapter-5/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-5/../chapter-1/methods.html">Methods</a></li>
 </ul>
 <pre><code class="language-rust">trait Drop {
     fn drop(&amp;mut self);
@@ -2625,11 +2626,11 @@ impl Index&lt;BasketballPosition&gt; for BasketballTeam {
 <h3 id="from--into"><a class="header" href="#from--into">From &amp; Into</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-6/from--into.html#self">Self</a></li>
-<li><a href="chapter-6/from--into.html#functions">Functions</a></li>
-<li><a href="chapter-6/from--into.html#methods">Methods</a></li>
-<li><a href="chapter-6/from--into.html#generic-parameters">Generic Parameters</a></li>
-<li><a href="chapter-6/from--into.html#generic-blanket-impls">Generic Blanket Impls</a></li>
+<li><a href="chapter-6/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-6/../chapter-1/functions.html">Functions</a></li>
+<li><a href="chapter-6/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-6/../chapter-1/generic-parameters.html">Generic Parameters</a></li>
+<li><a href="chapter-6/../chapter-1/generic-blanket-impls.html">Generic Blanket Impls</a></li>
 </ul>
 <pre><code class="language-rust">trait From&lt;T&gt; {
     fn from(T) -&gt; Self;
@@ -2835,16 +2836,16 @@ impl Person {
 <h3 id="error"><a class="header" href="#error">Error</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-7/error.html#self">Self</a></li>
-<li><a href="chapter-7/error.html#methods">Methods</a></li>
-<li><a href="chapter-7/error.html#default-impls">Default Impls</a></li>
-<li><a href="chapter-7/error.html#generic-blanket-impls">Generic Blanket Impls</a></li>
-<li><a href="chapter-7/error.html#subtraits--supertraits">Subtraits &amp; Supertraits</a></li>
-<li><a href="chapter-7/error.html#trait-objects">Trait Objects</a></li>
-<li><a href="chapter-7/error.html#display--tostring">Display &amp; ToString</a></li>
-<li><a href="chapter-7/error.html#debug">Debug</a></li>
-<li><a href="chapter-7/error.html#any">Any</a></li>
-<li><a href="chapter-7/error.html#from--into">From &amp; Into</a></li>
+<li><a href="chapter-7/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-7/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-7/../chapter-1/default-impls.html">Default Impls</a></li>
+<li><a href="chapter-7/../chapter-1/generic-blanket-impls.html">Generic Blanket Impls</a></li>
+<li><a href="chapter-7/../chapter-1/subtraits--supertraits.html">Subtraits &amp; Supertraits</a></li>
+<li><a href="chapter-7/../chapter-1/trait-objects.html">Trait Objects</a></li>
+<li><a href="chapter-7/../chapter-4/display--tostring.html">Display &amp; ToString</a></li>
+<li><a href="chapter-7/../chapter-4/debug.html">Debug</a></li>
+<li><a href="chapter-7/../chapter-3/any.html">Any</a></li>
+<li><a href="chapter-7/../chapter-6/from--into.html">From &amp; Into</a></li>
 </ul>
 <pre><code class="language-rust">trait Error: Debug + Display {
     // provided default impls
@@ -3057,15 +3058,15 @@ fn handle_sum_file_errors(path: &amp;Path) {
 <div style="break-before: page; page-break-before: always;"></div><h3 id="tryfrom--tryinto"><a class="header" href="#tryfrom--tryinto">TryFrom &amp; TryInto</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-8/tryfrom--tryinto.html#self">Self</a></li>
-<li><a href="chapter-8/tryfrom--tryinto.html#functions">Functions</a></li>
-<li><a href="chapter-8/tryfrom--tryinto.html#methods">Methods</a></li>
-<li><a href="chapter-8/tryfrom--tryinto.html#associated-types">Associated Types</a></li>
-<li><a href="chapter-8/tryfrom--tryinto.html#generic-parameters">Generic Parameters</a></li>
-<li><a href="chapter-8/tryfrom--tryinto.html#generic-types-vs-associated-types">Generic Types vs Associated Types</a></li>
-<li><a href="chapter-8/tryfrom--tryinto.html#generic-blanket-impls">Generic Blanket Impls</a></li>
-<li><a href="chapter-8/tryfrom--tryinto.html#from--into">From &amp; Into</a></li>
-<li><a href="chapter-8/tryfrom--tryinto.html#error">Error</a></li>
+<li><a href="chapter-8/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-8/../chapter-1/functions.html">Functions</a></li>
+<li><a href="chapter-8/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-8/../chapter-1/associated-types.html">Associated Types</a></li>
+<li><a href="chapter-8/../chapter-1/generic-parameters.html">Generic Parameters</a></li>
+<li><a href="chapter-8/../chapter-1/generic-types-vs-associated-types.html">Generic Types vs Associated Types</a></li>
+<li><a href="chapter-8/../chapter-1/generic-blanket-impls.html">Generic Blanket Impls</a></li>
+<li><a href="chapter-8/../chapter-6/from--into.html">From &amp; Into</a></li>
+<li><a href="chapter-8/../chapter-7/error.html">Error</a></li>
 </ul>
 <p><code>TryFrom</code> and <code>TryInto</code> are the fallible versions of <code>From</code> and <code>Into</code>.</p>
 <pre><code class="language-rust">trait TryFrom&lt;T&gt; {
@@ -3172,11 +3173,11 @@ fn example() -&gt; Result&lt;Triangle, OutOfBounds&gt; {
 <div style="break-before: page; page-break-before: always;"></div><h3 id="fromstr"><a class="header" href="#fromstr">FromStr</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-8/fromstr.html#self">Self</a></li>
-<li><a href="chapter-8/fromstr.html#functions">Functions</a></li>
-<li><a href="chapter-8/fromstr.html#associated-types">Associated Types</a></li>
-<li><a href="chapter-8/fromstr.html#error">Error</a></li>
-<li><a href="chapter-8/fromstr.html#tryfrom--tryinto">TryFrom &amp; TryInto</a></li>
+<li><a href="chapter-8/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-8/../chapter-1/functions.html">Functions</a></li>
+<li><a href="chapter-8/../chapter-1/associated-types.html">Associated Types</a></li>
+<li><a href="chapter-8/../chapter-7/error.html">Error</a></li>
+<li><a href="chapter-8/../chapter-8/tryfrom--tryinto.html">TryFrom &amp; TryInto</a></li>
 </ul>
 <pre><code class="language-rust">trait FromStr {
     type Err;
@@ -3274,12 +3275,11 @@ fn not_a_point() {
 <div style="break-before: page; page-break-before: always;"></div><h3 id="asref--asmut"><a class="header" href="#asref--asmut">AsRef &amp; AsMut</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-8/asref--asmut.html#self">Self</a></li>
-<li><a href="chapter-8/asref--asmut.html#methods">Methods</a></li>
-<li><a href="chapter-8/asref--asmut.html#sized">Sized</a></li>
-<li><a href="chapter-8/asref--asmut.html#generic-parameters">Generic Parameters</a></li>
-<li><a href="chapter-8/asref--asmut.html#sized">Sized</a></li>
-<li><a href="chapter-8/asref--asmut.html#deref--derefmut">Deref &amp; DerefMut</a></li>
+<li><a href="chapter-8/..chapter-1/self.html">Self</a></li>
+<li><a href="chapter-8/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-8/../chapter-2/sized.html">Sized</a></li>
+<li><a href="chapter-8/../chapter-1/generic-parameters.html">Generic Parameters</a></li>
+<li><a href="chapter-8/../chapter-5/deref--derefmut.html">Deref &amp; DerefMut</a></li>
 </ul>
 <pre><code class="language-rust">trait AsRef&lt;T: ?Sized&gt; {
     fn as_ref(&amp;self) -&gt; &amp;T;
@@ -3536,15 +3536,15 @@ fn example(human: Human, soldier: Soldier, knight: Knight, mage: Mage, wizard: W
 <div style="break-before: page; page-break-before: always;"></div><h3 id="borrow--borrowmut"><a class="header" href="#borrow--borrowmut">Borrow &amp; BorrowMut</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-8/borrow--borrowmut.html#self">Self</a></li>
-<li><a href="chapter-8/borrow--borrowmut.html#methods">Methods</a></li>
-<li><a href="chapter-8/borrow--borrowmut.html#generic-parameters">Generic Parameters</a></li>
-<li><a href="chapter-8/borrow--borrowmut.html#subtraits--supertraits">Subtraits &amp; Supertraits</a></li>
-<li><a href="chapter-8/borrow--borrowmut.html#sized">Sized</a></li>
-<li><a href="chapter-8/borrow--borrowmut.html#asref--asmut">AsRef &amp; AsMut</a></li>
-<li><a href="chapter-8/borrow--borrowmut.html#partialeq--eq">PartialEq &amp; Eq</a></li>
-<li><a href="chapter-8/borrow--borrowmut.html#hash">Hash</a></li>
-<li><a href="chapter-8/borrow--borrowmut.html#partialord--ord">PartialOrd &amp; Ord</a></li>
+<li><a href="chapter-8/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-8/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-8/../chapter-1/generic-parameters.html">Generic Parameters</a></li>
+<li><a href="chapter-8/../chapter-1/subtraits--supertraits.html">Subtraits &amp; Supertraits</a></li>
+<li><a href="chapter-8/../chapter-2/sized.html">Sized</a></li>
+<li><a href="chapter-8/./asref--asmut.html">AsRef &amp; AsMut</a></li>
+<li><a href="chapter-8/../chapter-5/partialeq--eq.html">PartialEq &amp; Eq</a></li>
+<li><a href="chapter-8/../chapter-5/hash.html">Hash</a></li>
+<li><a href="chapter-8/../chapter-5/partialord--ord.html">PartialOrd &amp; Ord</a></li>
 </ul>
 <pre><code class="language-rust">trait Borrow&lt;Borrowed&gt;
 where
@@ -3619,11 +3619,11 @@ where
 <div style="break-before: page; page-break-before: always;"></div><h3 id="toowned"><a class="header" href="#toowned">ToOwned</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-8/toowned.html#self">Self</a></li>
-<li><a href="chapter-8/toowned.html#methods">Methods</a></li>
-<li><a href="chapter-8/toowned.html#default-impls">Default Impls</a></li>
-<li><a href="chapter-8/toowned.html#clone">Clone</a></li>
-<li><a href="chapter-8/toowned.html#borrow--borrowmut">Borrow &amp; BorrowMut</a></li>
+<li><a href="chapter-8/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-8/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-8/../chapter-1/default-impls.html">Default Impls</a></li>
+<li><a href="chapter-8/../chapter-3/clone.html">Clone</a></li>
+<li><a href="chapter-8/../chapter-8/borrow--borrowmut.html">Borrow &amp; BorrowMut</a></li>
 </ul>
 <pre><code class="language-rust">trait ToOwned {
     type Owned: Borrow&lt;Self&gt;;
@@ -3641,10 +3641,10 @@ where
 <div style="break-before: page; page-break-before: always;"></div><h3 id="iterator"><a class="header" href="#iterator">Iterator</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-9/iterator.html#self">Self</a></li>
-<li><a href="chapter-9/iterator.html#methods">Methods</a></li>
-<li><a href="chapter-9/iterator.html#associated-types">Associated Types</a></li>
-<li><a href="chapter-9/iterator.html#default-impls">Default Impls</a></li>
+<li><a href="chapter-9/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-9/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-9/../chapter-1/associated-types.html">Associated Types</a></li>
+<li><a href="chapter-9/../chapter-1/default-impls.html">Default Impls</a></li>
 </ul>
 <pre><code class="language-rust">trait Iterator {
     type Item;
@@ -3967,10 +3967,10 @@ fn receivers_can_be_iterated() {
 <div style="break-before: page; page-break-before: always;"></div><h3 id="intoiterator"><a class="header" href="#intoiterator">IntoIterator</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-9/intoiterator.html#self">Self</a></li>
-<li><a href="chapter-9/intoiterator.html#methods">Methods</a></li>
-<li><a href="chapter-9/intoiterator.html#associated-types">Associated Types</a></li>
-<li><a href="chapter-9/intoiterator.html#iterator">Iterator</a></li>
+<li><a href="chapter-9/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-9/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-9/../chapter-1/associated-types.html">Associated Types</a></li>
+<li><a href="chapter-9/./iterator.html">Iterator</a></li>
 </ul>
 <pre><code class="language-rust">trait IntoIterator
 where
@@ -4000,11 +4000,11 @@ for v in (&amp;mut vec).into_iter() {}
 <div style="break-before: page; page-break-before: always;"></div><h3 id="fromiterator"><a class="header" href="#fromiterator">FromIterator</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-9/fromiterator.html#self">Self</a></li>
-<li><a href="chapter-9/fromiterator.html#functions">Functions</a></li>
-<li><a href="chapter-9/fromiterator.html#generic-parameters">Generic Parameters</a></li>
-<li><a href="chapter-9/fromiterator.html#iterator">Iterator</a></li>
-<li><a href="chapter-9/fromiterator.html#intoiterator">IntoIterator</a></li>
+<li><a href="chapter-9/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-9/../chapter-1/functions.html">Functions</a></li>
+<li><a href="chapter-9/../chapter-1/generic-parameters.html">Generic Parameters</a></li>
+<li><a href="chapter-9/./iterator.html">Iterator</a></li>
+<li><a href="chapter-9/./intoiterator.html">IntoIterator</a></li>
 </ul>
 <pre><code class="language-rust">trait FromIterator&lt;A&gt; {
     fn from_iter&lt;T&gt;(iter: T) -&gt; Self
@@ -4042,10 +4042,10 @@ fn entry_list&lt;K, V&gt;(map: HashMap&lt;K, V&gt;) -&gt; LinkedList&lt;(K, V)&g
 <h3 id="read--write"><a class="header" href="#read--write">Read &amp; Write</a></h3>
 <p>Prerequisites</p>
 <ul>
-<li><a href="chapter-10/read--write.html#self">Self</a></li>
-<li><a href="chapter-10/read--write.html#methods">Methods</a></li>
-<li><a href="chapter-10/read--write.html#scope">Scope</a></li>
-<li><a href="chapter-10/read--write.html#generic-blanket-impls">Generic Blanket Impls</a></li>
+<li><a href="chapter-10/../chapter-1/self.html">Self</a></li>
+<li><a href="chapter-10/../chapter-1/methods.html">Methods</a></li>
+<li><a href="chapter-10/../chapter-1/scope.html">Scope</a></li>
+<li><a href="chapter-10/../chapter-1/generic-blanket-impls.html">Generic Blanket Impls</a></li>
 </ul>
 <pre><code class="language-rust">trait Read {
     fn read(&amp;mut self, buf: &amp;mut [u8]) -&gt; Result&lt;usize&gt;;

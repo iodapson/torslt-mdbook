@@ -2,10 +2,10 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Derive Macros](#derive-macros)
-- [Display & ToString](#display--tostring)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Derive Macros](../chapter-1/derive-macros.md)
+- [Display & ToString](./display--tostring.md)
 
 ```rust
 trait Debug {

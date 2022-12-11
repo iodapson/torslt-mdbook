@@ -2,10 +2,10 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Associated Types](#associated-types)
-- [Iterator](#iterator)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Associated Types](../chapter-1/associated-types.md)
+- [Iterator](./iterator.md)
 
 ```rust
 trait IntoIterator

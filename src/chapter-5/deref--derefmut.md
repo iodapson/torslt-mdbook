@@ -2,11 +2,11 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Associated Types](#associated-types)
-- [Subtraits & Supertraits](#subtraits--supertraits)
-- [Sized](#sized)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Associated Types](../chapter-1/associated-types.md)
+- [Subtraits & Supertraits](../chapter-1/subtraits--supertraits.md)
+- [Sized](../chapter-2/sized.md)
 
 ```rust
 trait Deref {

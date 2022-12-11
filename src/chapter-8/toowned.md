@@ -2,11 +2,11 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
-- [Default Impls](#default-impls)
-- [Clone](#clone)
-- [Borrow & BorrowMut](#borrow--borrowmut)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
+- [Default Impls](../chapter-1/default-impls.md)
+- [Clone](../chapter-3/clone.md)
+- [Borrow & BorrowMut](../chapter-8/borrow--borrowmut.md)
 
 ```rust
 trait ToOwned {

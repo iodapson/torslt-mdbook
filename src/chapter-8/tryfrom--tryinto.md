@@ -2,15 +2,15 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Functions](#functions)
-- [Methods](#methods)
-- [Associated Types](#associated-types)
-- [Generic Parameters](#generic-parameters)
-- [Generic Types vs Associated Types](#generic-types-vs-associated-types)
-- [Generic Blanket Impls](#generic-blanket-impls)
-- [From & Into](#from--into)
-- [Error](#error)
+- [Self](../chapter-1/self.md)
+- [Functions](../chapter-1/functions.md)
+- [Methods](../chapter-1/methods.md)
+- [Associated Types](../chapter-1/associated-types.md)
+- [Generic Parameters](../chapter-1/generic-parameters.md)
+- [Generic Types vs Associated Types](../chapter-1/generic-types-vs-associated-types.md)
+- [Generic Blanket Impls](../chapter-1/generic-blanket-impls.md)
+- [From & Into](../chapter-6/from--into.md)
+- [Error](../chapter-7/error.md)
 
 `TryFrom` and `TryInto` are the fallible versions of `From` and `Into`.
 

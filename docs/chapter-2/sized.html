@@ -141,7 +141,7 @@
 <li><a href="../chapter-1/auto-traits.html">Auto Traits</a></li>
 </ul>
 <p>If a type is <code>Sized</code> that means its size in bytes is known at compile-time and it's possible to put instances of the type on the stack.</p>
-<p>Sizedness of types and its implications is a subtle yet huge topic that affects a lot of different aspects of the language. It's so important that I wrote an entire article on it called <a href="./sizedness-in-rust.html">Sizedness in Rust</a> which I highly recommend reading for anyone who would like to understand sizedness in-depth. I'll summarize a few key things which are relevant to this article.</p>
+<p>Sizedness of types and its implications is a subtle yet huge topic that affects a lot of different aspects of the language. It's so important that I wrote an entire article on it called <a href="https://github.com/pretzelhammer/rust-blog/blob/master/posts/sizedness-in-rust.md">Sizedness in Rust</a> which I highly recommend reading for anyone who would like to understand sizedness in-depth. I'll summarize a few key things which are relevant to this article.</p>
 <ol>
 <li>All generic types get an implicit <code>Sized</code> bound.</li>
 </ol>
@@ -162,7 +162,7 @@ fn func&lt;T: ?Sized&gt;(t: &amp;T) {}
 // example above desugared
 trait Trait: ?Sized {}
 </code></pre>
-<p>This is so that trait objects can impl the trait. Again, all of the nitty gritty details are in <a href="./sizedness-in-rust.html">Sizedness in Rust</a>. <strong>Do something: make link work</strong></p>
+<p>This is so that trait objects can impl the trait. Again, all of the nitty gritty details are in <a href="https://github.com/pretzelhammer/rust-blog/blob/master/posts/sizedness-in-rust.md">Sizedness in Rust</a>.</p>
 
                     </main>
 

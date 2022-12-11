@@ -10,6 +10,7 @@ trait Trait {
 }
 struct SomeType;
 struct OtherType;
+
 // use default impl for Trait::method
 impl Trait for SomeType {}
 impl Trait for OtherType {

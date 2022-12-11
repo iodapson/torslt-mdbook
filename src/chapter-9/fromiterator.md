@@ -2,11 +2,11 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Functions](#functions)
-- [Generic Parameters](#generic-parameters)
-- [Iterator](#iterator)
-- [IntoIterator](#intoiterator)
+- [Self](../chapter-1/self.md)
+- [Functions](../chapter-1/functions.md)
+- [Generic Parameters](../chapter-1/generic-parameters.md)
+- [Iterator](./iterator.md)
+- [IntoIterator](./intoiterator.md)
 
 ```rust
 trait FromIterator<A> {

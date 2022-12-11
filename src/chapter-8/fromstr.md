@@ -2,11 +2,11 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Functions](#functions)
-- [Associated Types](#associated-types)
-- [Error](#error)
-- [TryFrom & TryInto](#tryfrom--tryinto)
+- [Self](../chapter-1/self.md)
+- [Functions](../chapter-1/functions.md)
+- [Associated Types](../chapter-1/associated-types.md)
+- [Error](../chapter-7/error.md)
+- [TryFrom & TryInto](../chapter-8/tryfrom--tryinto.md)
 
 ```rust
 trait FromStr {

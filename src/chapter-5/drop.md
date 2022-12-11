@@ -2,8 +2,8 @@
 
 Prerequisites
 
-- [Self](#self)
-- [Methods](#methods)
+- [Self](../chapter-1/self.md)
+- [Methods](../chapter-1/methods.md)
 
 ```rust
 trait Drop {
